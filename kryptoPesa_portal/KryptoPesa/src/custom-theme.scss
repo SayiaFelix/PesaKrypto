@@ -1,0 +1,57 @@
+
+
+@use '@angular/material' as mat;
+@include mat.core();
+
+
+// $KryptoPesa-primary: mat.define-palette(mat.$indigo-palette);
+// $KryptoPesa-accent: mat.define-palette(mat.$pink-palette);
+// $KryptoPesa-warn: mat.define-palette(mat.$red-palette);
+
+// $KryptoPesa-theme: mat.define-light-theme((
+//   color: (
+//     primary: $KryptoPesa-primary,
+//     accent: $KryptoPesa-accent,
+//     warn: $KryptoPesa-warn,
+//   )
+// ));
+
+// .light-theme-mode{
+ 
+// }
+// @include mat.all-component-themes($KryptoPesa-theme);
+
+$KryptoPesa-primary-dark: mat.define-palette(mat.$pink-palette);
+$KryptoPesa-accent-dark: mat.define-palette(mat.$blue-grey-palette);
+$KryptoPesa-warn-dark: mat.define-palette(mat.$red-palette);
+
+$KryptoPesa-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $KryptoPesa-primary-dark,
+    accent: $KryptoPesa-accent-dark,
+    warn: $KryptoPesa-warn-dark,
+  )
+));
+
+// @include mat.all-component-colors($KryptoPesa-theme-dark);
+@include mat.core-theme($KryptoPesa-theme-dark);
+@include mat.button-theme($KryptoPesa-theme-dark);
+
+
+
+//for light mode
+$KryptoPesa-primary-light: mat.define-palette(mat.$indigo-palette);
+$KryptoPesa-accent-light: mat.define-palette(mat.$pink-palette);
+$KryptoPesa-warn-light: mat.define-palette(mat.$red-palette);
+
+$KryptoPesa-theme-light: mat.define-light-theme((
+  color: (
+    primary: $KryptoPesa-primary-light,
+    accent: $KryptoPesa-accent-light,
+    warn: $KryptoPesa-warn-light,
+  )
+));
+.light-theme-mode{
+    // @include mat.all-component-colors($KryptoPesa-theme-light);
+      @include mat.core-theme($KryptoPesa-theme-light);
+}

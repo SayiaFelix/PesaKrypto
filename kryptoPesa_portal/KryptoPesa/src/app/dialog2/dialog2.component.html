@@ -1,0 +1,41 @@
+<div class="container" style="background-color: white; color: black; text-align:center; border-radius: 8px;">
+    <div class="row">
+        <div>
+            <h1 mat-dialog-title class="text-center mt-3">
+                Pay Your 
+                <br>
+                <span style="color:#5BC43B;">
+                     <b>Bills</b>
+                </span>
+            </h1>
+        </div>
+        <hr>
+        <div mat-dialog-content>
+            <form [formGroup]="sendForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Paybill</mat-label>
+                    <input type="number" formControlName="paybill" placeholder="Paybill" matInput [mask]="'000000'"
+                        required>
+
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Account No.</mat-label>
+                    <input type="number" formControlName="accountno" placeholder="Account No" matInput required>
+
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Amount(Solana)</mat-label>
+                    <input formControlName="price" matInput type="number" placeholder="Amount(Solana)">
+                </mat-form-field>
+                <br>
+            </form>
+        </div>
+        <hr>
+        <div mat-dialog-actions [align]="'center'" class="mb-1">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button class="ml-2" mat-raised-button color="primary" (click)="payment()">Send</button>
+        </div>
+    </div>
+</div>

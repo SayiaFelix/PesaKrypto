@@ -1,0 +1,64 @@
+.coindetail {
+   background-image: url(../../assets/testimonial-background.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+   -webkit-background-size: cover;
+   background-size: cover;
+   color: #fff;
+   margin-top: -14px;
+   padding-bottom: 10px;
+}
+.details {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.details h2 {
+        color: #5BC43B;
+        font-size: 25px;
+    }
+
+.details h3 {
+        width: 100%;
+        padding: 25px; 
+    }
+.details .img {
+    background: transparent;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column; */
+ 
+
+}
+
+.more-detail {
+    text-align: center;
+    margin: 1px; 
+}
+.more-detail .title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+.more-detail   .value {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+.button_2 {
+    color: #f9b707 ;
+    background: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #fff;
+    width: 23%;
+}
+
+.button_2:hover {
+    background: #009688;
+    font-weight: 700;
+    font-size: 18px;
+    border: 1px solid #009688;
+}

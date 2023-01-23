@@ -1,0 +1,490 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+body {
+    background-color: #202022;
+    color: #fff;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.eyeicon {
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 43%;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.eyeicon:hover {
+    color: #5BC43B;
+    font-size: 15px;
+}
+
+.Social-account {
+    display: block;
+}
+
+.Social-account span {
+    display: inline-block;
+    padding: 5px;
+
+}
+
+.Social-account span a {
+    color: #ddd;
+    font-size: 20px;
+}
+
+.Social-account span a:hover {
+    color: #5BC43B;
+}
+
+.auth {
+    background-color: #5BC43B;
+    width: 190px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    align-items: center;
+    text-align: center;
+    color: #202022;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-left: 33%;
+}
+
+.auth:hover {
+    background-color: white;
+    color: #5BC43B;
+    border: #5BC43B solid 1px;
+}
+
+.register h2 {
+    color: #fff;
+    font-size: 25px;
+
+}
+
+.register h6 {
+    color: #fff;
+    font-size: 18px;
+
+}
+
+.register .card {
+    background-color: #202022;
+    color: #fff;
+    margin-top: 25px;
+    min-height: 380px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.register .card form input {
+    background-color: #202022;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid #fff;
+}
+
+.button_1 {
+    background-color: #5BC43B;
+    color: #fff;
+    line-height: 45px;
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.button_1:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.bitcoin {
+    position: absolute;
+    left: 2%;
+    right: -2%;
+    transform: rotate(49.35deg);
+}
+
+.bitcoin2 {
+    position: absolute;
+    left: 15%;
+    right: -15%;
+    top: 65%;
+    bottom: -65%;
+    transform: rotate(82.48deg);
+}
+
+.bitcoin3 {
+    position: absolute;
+    left: 0.5%;
+    right: -0.5%;
+    top: 120%;
+    bottom: -120%;
+    transform: rotate(50.35deg);
+}
+
+.litcoin {
+    position: absolute;
+    left: 40%;
+    right: -40%;
+    top: 24%;
+    bottom: -24%;
+    transform: rotate(34.33deg);
+}
+
+.litcoin2 {
+    position: absolute;
+    left: 80%;
+    right: -80%;
+    top: 110%;
+    bottom: -110%;
+    transform: rotate(-98.25deg);
+}
+
+.etherium {
+    position: absolute;
+    right: 20%;
+    top: 82%;
+    bottom: -82%;
+    transform: rotate(-68.02deg);
+}
+
+.etherium2 {
+    position: absolute;
+    transform: rotate(44.79deg);
+
+}
+
+.etherium3 {
+    position: absolute;
+    right: 2%;
+    top: 70.41%;
+    bottom: -70.41%;
+    transform: rotate(-36.45deg);
+}
+
+/* Transition Effect */
+
+a,
+a:hover,
+.overlay,
+img,
+.form-control,
+.form-control:hover,
+button {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.scroll-top {
+    background-color: #5BC43B;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 19px;
+    margin-right: 2%;
+    color: #fff;
+    border-radius: 3px;
+    z-index: 999;
+    float: right;
+    padding: 5px 0;
+}
+
+.scroll-top:hover {
+    background-color: #202022;
+    color: #fff;
+}
+
+.about {
+    background-image: url('./assets/aboutpg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb {
+    font-size: 25px;
+    background-color: transparent;
+    position: absolute;
+    top: calc(50% - 23px);
+    margin: 0;
+
+}
+
+.breadcrumb li a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+    color: #5BC43B;
+}
+
+.breadcrumb .active {
+    color: #5BC43B;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/*
+    Theme Responsive Design
+*/
+
+@media (max-width: 1024px) {
+    .eyeicon {
+        margin-left: 41%;
+    }
+
+    .auth {
+        width: 180px;
+        margin-left: 30%;
+    }
+}
+
+/* ---- Start of max-width 992px CSS ---- */
+
+@media (max-width: 992px) {
+    .eyeicon {
+        margin-left: 38%;
+    }
+
+    .auth {
+        width: 180px;
+        margin-left: 23%;
+    }
+
+
+    .about_image {
+        display: none;
+    }
+
+    .about_content {
+        padding: 0;
+    }
+
+    .bitcoin2 {
+        display: none;
+    }
+
+    .bitcoin3 {
+        display: none;
+    }
+
+    .litcoin2 {
+        display: none;
+    }
+
+    .etherium {
+        display: none;
+    }
+    .image1{
+        display: none;
+    }
+
+}
+
+/* ---- End of max-width 992px CSS ---- */
+
+/* ---- Start of min-width 480px and max-width 768px CSS ---- */
+
+@media all and (min-width: 480px) and (max-width: 768px) {}
+
+/* ---- End of min-width 480px and max-width 768px CSS ---- */
+
+/* ---- Start of max-width 767px CSS ---- */
+
+@media all and (max-width: 767px) {
+    .eyeicon {
+        margin-left: 91%;
+    }
+
+    .auth {
+        width: 190px;
+        margin-left: 32%;
+    }
+
+    .card {
+        border: none;
+    }
+
+    body,
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p br {
+        display: none;
+    }
+    .sidenav{
+        width:100px;
+    }
+    .main {
+       margin-left: 100px;
+   }
+ .img1{
+    width: 80px;
+ }
+  .image1{display: none;}
+}
+
+/* ---- End of max-width 767px CSS ---- */
+
+/* ---- Start of max-width 480px CSS ---- */
+
+@media all and (max-width: 480px) {
+    .eyeicon .eye {
+        margin-left: 90%;
+    }
+
+    .auth {
+        width: 180px;
+        margin-left: 26%;
+    }
+
+    .coinBar {
+        width: 100%;
+    }
+
+    .card {
+        margin-right: 15px;
+        border: none;
+    }
+
+    .card img {
+        width: 20px;
+    }
+
+    .card h5 {
+        font-size: 9px;
+    }
+
+    .litcoin {
+        display: none;
+    }
+
+    .bitcoin {
+        display: none;
+    }
+
+    .bitcoin2 {
+        display: none;
+    }
+
+    .bitcoin3 {
+        display: none;
+    }
+   .krypto {
+      display:none;
+     }
+    .litcoin2 {
+        display: none;
+    }
+
+    .etherium2 {
+        display: none;
+    }
+
+    .etherium3 {
+        display: none;
+    }
+
+    .etherium {
+        display: none;
+    }
+   .sidenav{
+        width:80px;
+    }
+    .main {
+       margin-left: 80px;
+   }
+   .chart{
+    display: none;
+   }
+   .image1{display: none;}
+}
+
+/* ---- End of max-width 480px CSS ---- */
+
+
+/* ---- Start of max-width 380px CSS ---- */
+
+@media all and (max-width: 380px) {
+    .eyeicon {
+        margin-left: 87%;
+    }
+
+    .eye {
+        margin-left: 85%;
+    }
+
+    .auth {
+        width: 165px;
+        margin-left: 21%;
+    }
+
+    .coinBar {
+        width: 100%;
+    }
+
+    .card {
+        border: none;
+        
+    }
+
+    .card img {
+        width: 8px;
+    }
+
+    .card h5 {
+        font-size: 5px;
+    }
+
+    .litcoin {
+        display: none;
+    }
+}
+
+/* ---- End of max-width 380px CSS ---- */

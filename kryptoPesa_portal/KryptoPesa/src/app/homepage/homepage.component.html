@@ -1,0 +1,164 @@
+<div class="banner">
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                       <h1 class="">
+                          Pay With Your
+                          <br><br>
+                         <span style="color: #5BC43B;">KryptoCash</span>
+                        </h1>
+                        <h4>An Easy Way to make use of your CryptoCurrency in your daily activities.
+                         </h4>
+                </div>
+                <div class="col-md-6 col-sm-6 image1"> 
+                     <img src="../../assets/thumbnail-header-1.webp"  class="img1" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="promo mt-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="fw-bold">EASY WAY
+                <span style="color:#5BC43B;">TO START</span>
+                WITH US
+            </h1>
+            <p>Follow our simple and clear steps to start with us</p>
+            <img src="../../assets/s.png" class="image-fluid" alt="img">
+
+        </div>
+        <div class="row promo_wrapper text-center mt-5">
+            <div class="col-md-3 col-sm-6 sm-padding">
+                <div class="promo_content align-center">
+                    <img src="../../assets/1.png" alt="icon">
+                    <h4 class="fs-5 fw-bold">EASY ACCESS</h4>
+                    <p>Clickon the Register and after that go to our dashboard to start with us </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 sm-padding">
+                <div class="promo_content align-center">
+                    <img src="../../assets/2.png" alt="icon">
+                    <h4 class="fs-5 fw-bold">RECHARGE WALLET</h4>
+                    <p>Then Recharge your Wallet by tranferring your cryptocurrency(solana) to your wallet.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 sm-padding">
+                <div class="promo_content align-center">
+                    <img src="../../assets/3.png" alt="icon">
+                    <h4 class="fs-5 fw-bold">MAKE PAYMENTS</h4>
+                    <p>Click on make payment or send money button and you will be prompt to enter details.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 sm-padding">
+                <div class="promo_content align-center">
+                    <img src="../../assets/promo-2.png" alt="icon">
+                    <h4 class="fs-5 fw-bold">SAFE AND SECURE</h4>
+                    <p>Our Wallet System is safe and secure for your transaction with crptocurrency.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="krypto">
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1 class="fw-bold mt-2"> CRYPTOCURRENCY
+                <span style="color:#5BC43B; font-weight:bold;"> PRICES </span>
+            </h1>
+            <p>Here are some that we featured for choose your best</p>
+            <img src="../../assets/s.png" class="image-fluid" alt="img">
+        </div>
+        <div>
+            <div class="container">
+                <div class="row text-center">
+                    <div *ngIf="loading$ | async" class="spinner-border text-success text-center" role="status">
+                        <span class="visually-hidden text-center">Loading...</span>
+                    </div>
+                    <mat-form-field appearance="standard">
+                        <mat-label class="text-light fs-6">
+                            Filter
+                        </mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Cryptocurrency" #input>
+                    </mat-form-field>
+                    <!-- <mat-progress-spinner value="accent" mode="indeterminate" *ngIf="loading$ | async"></mat-progress-spinner> -->
+                    <div class="mat-elevation-z8">
+                        <table mat-table [dataSource]="dataSource" matSort>
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> COIN </th>
+                                <td class="text-start" mat-cell *matCellDef="let row">
+                                    <img [src]="row.image" width="45" alt="image">
+                                    <span class="mx-2"> {{row.name | uppercase}}</span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="current_price">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>$ PRICE</th>
+                                <td class="text-start" mat-cell *matCellDef="let row"> {{row.current_price | currency}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="price_change_percentage_24h">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> 24h% CHANGE </th>
+                                <td class="text-start"  mat-cell *matCellDef="let row"> {{row.price_change_percentage_24h}}% </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="market_cap" id="volume">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header>VOLUME(24h)</th>
+                                <td class="text-start" mat-cell *matCellDef="let row">
+                                    {{row.market_cap | currency}}
+                                    <span class="mx-1 fw-bold" style="color:#5BC43B ;">({{row.symbol |
+                                        uppercase}})</span>
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="circulating_supply">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> SUPPLY </th>
+                                <td class="text-start"  mat-cell *matCellDef="let row"> {{row.circulating_supply}}</td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row (click)="getDetail(row)" *matRowDef="let row; columns: displayedColumns;">
+                            </tr>
+
+                            <tr class="mat-row" *matNoDataRow>
+                                <td class="mat-cell" colspan="4">No data matching the filter
+                                    "{{input.value}}"
+                                </td>
+                            </tr>
+                        </table>
+
+                        <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" aria-label="Select page of users">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="testimonial_section">
+    <div class="container mt-4">
+        <div class="section_heading text-center text-light">
+            <h1 class="fw-bold">WHAT OUR
+                <span style="color: #5BC43B; font-weight:bold;">CLIENTS</span>
+                SAY
+            </h1>
+            <p>Hear from our esteemed clients whom we have worked with.</p>
+            <img src="../../assets/s.png" class="img-fluid" alt="banner">
+        </div>
+        <div class="testimonial_items mt-5">
+            <div class="testimonial_item">
+                <h4>Jay safu</h4>
+                <i class="fa-solid fa-quote-left"></i>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                    Business Ipsum has been the industry's standard dummy text ever.</p>
+                <figure>
+                    <img src="../../assets/blog-1.jpg" alt="Client">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<hr style="margin-top: -10px;">

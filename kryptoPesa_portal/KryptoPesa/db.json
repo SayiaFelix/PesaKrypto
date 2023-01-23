@@ -1,0 +1,258 @@
+{
+  "users": [
+    {
+      "firstname": "Felix",
+      "lastname": "Sayia",
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 1
+    },
+    {
+      "email": "admi@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 2
+    },
+    {
+      "firstname": "FELIX",
+      "lastname": "SA",
+      "id": 3
+    },
+    {
+      "contact": "56353423",
+      "id": 4
+    },
+    {
+      "email": "admin@com",
+      "password": "demo123456",
+      "cpassword": "demo123456",
+      "id": 5
+    },
+    {
+      "firstname": "iyiu",
+      "lastname": "oiuo",
+      "id": 6
+    },
+    {
+      "contact": "432434",
+      "id": 7
+    },
+    {
+      "email": "Sy8@gmail.com",
+      "password": "12345678",
+      "cpassword": "12345678",
+      "id": 8
+    },
+    {
+      "firstname": "yuytgu",
+      "lastname": "kiuiu",
+      "id": 9
+    },
+    {
+      "contact": 0,
+      "id": 10
+    },
+    {
+      "firstname": "kjl",
+      "lastname": "oiuoi",
+      "id": 11
+    },
+    {
+      "contact": 7789877080,
+      "id": 12
+    },
+    {
+      "email": "admin@deo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 13
+    },
+    {
+      "firstname": "khkh",
+      "lastname": ",h,jh",
+      "id": 14
+    },
+    {
+      "contact": 878,
+      "id": 15
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 16
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 17
+    },
+    {
+      "firstname": "ruyy",
+      "lastname": "khiu",
+      "id": 18
+    },
+    {
+      "contact": 564768,
+      "id": 19
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 20
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 21
+    },
+    {
+      "firstname": "FE",
+      "lastname": "45",
+      "id": 22
+    },
+    {
+      "contact": 2334,
+      "id": 23
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 24
+    },
+    {
+      "firstname": "eerf",
+      "lastname": "4r3",
+      "id": 25
+    },
+    {
+      "contact": 3223,
+      "id": 26
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 27
+    },
+    {
+      "firstname": "dsd",
+      "lastname": "dsds",
+      "id": 28
+    },
+    {
+      "contact": 4443,
+      "id": 29
+    },
+    {
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 30
+    },
+    {
+      "firstname": "iyu",
+      "lastname": "uiou",
+      "id": 31
+    },
+    {
+      "contact": 3543,
+      "id": 32
+    },
+    {
+      "contact": 3423,
+      "id": 33
+    },
+    {
+      "email": "admin1@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 34
+    },
+    {
+      "firstname": "rr",
+      "lastname": "err",
+      "id": 35
+    },
+    {
+      "contact": 3243,
+      "id": 36
+    },
+    {
+      "firstname": "hjghj",
+      "lastname": "uyiuyiu",
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 37
+    },
+    {
+      "firstname": "few",
+      "lastname": "wqf",
+      "email": "admin@demo.com",
+      "password": "demo12345",
+      "cpassword": "demo12345",
+      "id": 38
+    },
+    {
+      "firstname": "423423",
+      "lastname": "45345e",
+      "email": "fdrew@rerer",
+      "contact": 4535,
+      "password": "Jaysafumsela",
+      "cpassword": "Jaysafumsela",
+      "id": 39
+    },
+    {
+      "firstname": "wewe",
+      "lastname": "34234",
+      "email": "333ewe@dfd",
+      "contact": "543534546453",
+      "password": "jaysafumsela",
+      "cpassword": "jaysafumsela",
+      "id": 40
+    },
+    {
+      "firstname": "deeeeeed",
+      "lastname": "edede",
+      "email": "edede@ewde",
+      "contact": "322222222222",
+      "password": "123456789",
+      "cpassword": "123456789",
+      "id": 41
+    },
+    {
+      "firstname": "wewew",
+      "lastname": "edewde",
+      "email": "s@s",
+      "contact": "232322323223",
+      "password": "123456789",
+      "cpassword": "123456789",
+      "id": 42
+    },
+    {
+      "firstname": "Felix",
+      "lastname": "Sayia",
+      "email": "Sayiafelix18@gmail.com",
+      "contact": "121345678998",
+      "password": "123456789",
+      "cpassword": "123456789",
+      "id": 43
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,187 @@
+<section class="about">
+    <div class="container">
+        <div class="about_content">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a routerLink="/homepage" href=""> Home</a>
+                </li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="about_section">
+    <div class="container">
+        <div class="section_heading text-center mt-1">
+            <h4>KryptoPesa</h4>
+            <h2 class="fw-bold">Paying With Your KryptoCurrency</h2>
+            <p class="text-center">In our wallet system you are able to make payments and pay bills with your
+                cryptocurrency(solana) and its easy and effective.</p>
+            <img src="../../assets/sb.png" class="image-fluid" alt="banner">
+        </div>
+        <div class="row about_b mt-5">
+            <div class="col-sm-6 col-md-6">
+                <div class="about_info">
+                    <h3 class="fw-bold">What Is <span>KryptoPesa?</span></h3>
+                    <p class="mt-2">KryptoPesa is an application where global cryptocurrency owner can make use of his/her solana to make payments and pay bills with it. The process is easy and effective.</p>
+                    <a routerLink="/signup" class="btn button_1">GET STARTED</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="why_info">
+                    <h3 class="fw-bold">Why Choose Us?</h3>
+                    <img src="../../assets/s.png" class="image-fluid" alt="banner" />
+                    <div class="mt-3">
+                        <p><i class="fa fa-check"></i>We offer the most package of service in the finetech industry.</p>
+                        <p><i class="fa fa-check"></i>High customer retention rate with our effective wallet system.</p>
+                        <p><i class="fa fa-check"></i>Global Cryptocurrency owner can make payment with the cryptocurrency.</p>
+                        <p><i class="fa fa-check"></i>We also offer secure and affordable service to our customers.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about_image"></div>
+</section>
+
+<div class="container">
+    <section class="team-section centred">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h1 class="fw-bold">KRYPTOPESA <span style="color: #5BC43B;">EXPERTS</span></h1>
+                <p>Here are some that we featured for choose your best</p>
+                <span><img src="../../assets/s.png" class="image-fluid" alt="banner" /></span>
+                <br>
+                <br>
+            </div>
+            <div class="row clearfix mt-3">
+                <div class="col-lg-4 col-md-4 col-sm-12 team-block">
+                    <div class="team_member">
+                        <img src="../../assets/team-3.jpg" class="image-fluid" alt="team">
+                        <div class="overlay">
+                            <h3><span>Sayia Felix</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul class="team_social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 team-block">
+                    <div class="team_member">
+                        <img src="../../assets/team-3.jpg" class="image-fluid" alt="team">
+                        <div class="overlay">
+                            <h3><span>Chacha John</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul class="team_social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 team-block">
+                    <div class="team_member">
+                        <img src="../../assets/team-3.jpg" class="image-fluid" alt="team">
+                        <div class="overlay">
+                            <h3><span>Michael Musya</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <ul class="team_social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="contactus mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <div class="sec-title text-center" style="margin-top: 20px;">
+                    <h1 class="fw-bold">SAY SOMETHING <span style="color: #5BC43B;">FOR US</span></h1>
+                    <p>Please don’t hesitate to chat with me just drop a line.</p>
+                    <span><img src="../../assets/s.png" class="image-fluid" alt="banner" /></span>
+                    <br>
+                    <br>
+                </div>
+                <form [formGroup]="contactForm" class="mt-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-2" [class.error]="contactForm.controls['name'].dirty &&
+                                      contactForm.hasError('required','name')">
+                                <input placeholder="Name" class="form-control" type="text" formControlName="name"
+                                    required>
+                            </div>
+                            <small *ngIf="contactForm.controls['name'].dirty && 
+                                        contactForm.hasError('required','name')" class="text-danger">
+                                Name is required
+                            </small>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-2" [class.error]="contactForm.controls['email'].dirty && 
+                                     contactForm.hasError('required','email')">
+                                <input placeholder="Email" class="form-control" formControlName="email" type="email"
+                                    required>
+                            </div>
+                            <small *ngIf="contactForm.controls['email'].dirty &&
+                                      contactForm.hasError('required','email')" class="text-danger">
+                                Email is required
+                            </small>
+                            <small *ngIf="contactForm.controls['email'].dirty && 
+                                        contactForm.hasError('email','email')" class="text-danger">
+                                Input Email Format
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group mb-2" [class.error]="contactForm.controls['message'].dirty &&
+                         contactForm.hasError('required','message')">
+                        <textarea placeholder="Your Message..." class="form-control" rows="5" id="comment"
+                            formControlName="message" required>
+                            </textarea>
+                    </div>
+                    <small *ngIf="contactForm.controls['message'].dirty && 
+                            contactForm.hasError('required','message')" class="text-danger">
+                        Message is required
+                    </small>
+                    <button type="reset" [disabled]="contactForm.invalid" (click)="sendMessage(contactForm.value)"
+                        class="btn button_1 mt-1">
+                        Send Message
+                    </button>
+                    <p class="mt-2" *ngIf="isSubmit" style="color: #5BC43B; font-size:20px; float: right;">
+                        {{submittedMessage}}
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-1">
+    <div class="row">
+        <div class="col-12" style="border-top: 1px solid black;border-radius:5px;">
+            <div class="">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3237489368!2d36.70730825509494!3d-1.303205056014412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1645877293546!5m2!1sen!2ske "
+                    width="100%" height="400" style="border:0; " allowfullscreen=" " loading="lazy "></iframe>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<div *ngIf="nav.visible">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow p-3 rounded"
+    [ngClass]="{'light-theme-mode':isLightTheme}">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-2 " href="#">
+        <img src="../../assets/logo.png" alt="" width="50" height="50" class="d-inline-block align-text-top img-fluid"
+          style="margin-top: -2%;">
+        <span style="color: #fff; font-size:21px;">
+          Krypto</span>
+        <span style="color:  #5BC43B; font-size:22px;" class="fw-bold">Pesa</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="font-size: 18px; font-weight: 500;">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/homepage" routerLinkActive="active" href="#">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about-us" routerLinkActive="active">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" href="#">
+              Download
+            </a>
+          </li>
+        </ul>
+        <mat-slide-toggle class="text" [(ngModel)]="isLightTheme" (change)="storedThemeSelection()">
+          <span style="flex:auto;"></span>
+        </mat-slide-toggle>
+        <div class="d-flex nav-item">
+          <button class="btn button_1">
+            <a class="nav-link" routerLink="/signup" routerLinkActive="active">
+              Register Now
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="coinBar">
+    <marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" loop="infinite" direction="left">
+      <div class="row">
+        <ng-container *ngFor="let row of coinData">
+          <div class="col-1">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="card">
+                  <img [src]="row.image" class="img-fluid" alt="">
+                  <div class="">
+                    <h5 class="text-center">
+                      <span style="color:#5BC43B;padding: 1px; font-size:10px;">
+                        (<b> {{row.symbol | uppercase}}</b>)
+                      </span>
+                      <br>
+                      <span class="fw-bold text-dark">{{row.current_price | currency}}</span>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </ng-container>
+      </div>
+    </marquee>
+  </div>
+
+</div>

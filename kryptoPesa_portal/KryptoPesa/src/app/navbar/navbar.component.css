@@ -1,0 +1,36 @@
+.collapse li {
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.collapse li :hover {
+    box-shadow: 0px 8px 8px 0px rgba(2, 2, 2, 0.952);
+    transition: all 0.2s ease-in-out;
+    color: #5BC43B;
+}
+
+.coinBar {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2px;
+    background-color: #fff;
+}
+
+.card {
+    border: 2%;
+    background: transparent;
+    color: #fff;
+    height: 70px;
+    width: 70px;
+}
+
+.card img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.card h5 {
+    font-weight: 500;
+}

@@ -1,0 +1,78 @@
+<hr style="margin-top:-1px;">
+<div class="register" style="border-bottom: 1px solid black ;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-1">
+        <img src="../../assets/c-1.png" width="70px" class="image-fluid bitcoin" alt="lit">
+        <img src="../../assets/c-1.png" width="130px" class="image-fluid bitcoin2" alt="lit">
+      </div>
+      <div class="col-md-6 col-sm-8">
+        <div class="panel card p-2">
+          <div class="text-center mt-3">
+            <h2>Sign
+              <span style="color:#5BC43B; font-weight:bold;"> In </span>
+            </h2>
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+          </div>
+          <div class="panel-body mt-3">
+            <form [formGroup]="LoginForm" (ngSubmit)="login()">
+              <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && 
+                    LoginForm.hasError('required','email')">
+                <label for="Email">Email</label>
+                <br>
+                <input class="form-control" formControlName="email" type="text" required="required">
+              </div>
+              <small *ngIf="LoginForm.controls['email'].dirty && 
+                    LoginForm.hasError('required','email')" class="text-danger">Email is required</small>
+
+              <small *ngIf="LoginForm.controls['email'].dirty &&
+                    LoginForm.hasError('email','email')" class="text-danger">Input Email Format</small>
+
+
+              <div class="form-group mt-3" [class.error]="LoginForm.controls['password'].dirty && 
+                    LoginForm.hasError('required','password')">
+                <label for="Password">Pin</label>
+                <br>
+                <input class="form-control" formControlName="password" [type]="changepass?'password':'text'"  [mask]="'(0000)'" required>
+                <span class="eyeicon eye" (click)="viewpass()">
+                  <i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
+              </div>
+              <small *ngIf="LoginForm.controls['password'].dirty && 
+                    LoginForm.hasError('required','password')" class="text-danger">Password is required</small>
+              <br>
+              <div class="mt-2">
+                <input class="" type="checkbox" name="remember" id="remember">
+                <span class="p-1">Remember Me?</span>
+                <p class="form-inline" style="float: right;">
+                  <a style="color: #5BC43B; text-decoration: none;" routerLink="/forget-password">Forget Password? </a>
+                </p>
+              </div>
+              <div>
+                <button type="submit" class="auth btn mt-4 bt-lg">Sign In</button>
+              </div>
+              <div class="mt-4 text-center">
+                <p> Or Sign In With Other Accout</p>
+              </div>
+              <div class="Social-account text-center p-2">
+                <span><a href="#"><i class="fa fa-google"></i></a></span>
+                <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+                <span><a href="#"><i class="fa fa-instagram"></i></a></span>
+                <span><a href="#"><i class="fa fa-linkedin"></i></a></span>
+              </div>
+              <div class="mt-1 text-center">
+                <p><a style="text-decoration: none;" routerLink="/signup" class="text-light">Don't have an account? <br>
+                    <span style="color:#5BC43B; padding: 5px;">
+                      Sign Up</span></a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-1">
+        <img src="../../assets/c-1.png" width="110px" class="image-fluid etherium" alt="lit">
+        <img src="../../assets/c-1.png" width="90px" class="image-fluid etherium2" alt="lit">
+        <img src="../../assets/c-1.png" width="70px" class="image-fluid etherium3" alt="lit">
+      </div>
+    </div>
+  </div>
+</div>

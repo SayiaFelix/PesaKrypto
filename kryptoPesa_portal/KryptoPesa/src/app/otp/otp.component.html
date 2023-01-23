@@ -1,0 +1,39 @@
+<hr style="margin-top:-1px;">
+<div class="register" style="border-bottom: 1px solid black ;">
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-3 col-sm-1">
+        <img src="../../assets/c-1.png" width="70px" class="image-fluid bitcoin" alt="lit">
+        <img src="../../assets/c-1.png" width="150px" class="image-fluid bitcoin2" alt="lit">
+      </div>
+      <div class="col-md-6 col-sm-8">
+        <div class="card p-2">
+          <div class="text-center mt-5">
+            <h2>We Have Sent a Verification Code</h2>
+            <h6>A text with a verification code has been sent To <br>
+              +2547********* input it in the filled below <br>
+              and complete your Sign In process.</h6>
+          </div>
+
+          <div class="mt-3 text-center">
+            <h1>Otp
+               <span style="color:#5BC43B; font-weight:bold;"> Verification </span>
+               Code
+            </h1>
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="configOptions"></ng-otp-input>
+          </div>
+            <br>
+             <button type="submit" [ngClass]="btnStatus" (click)="validateOtp()"
+              class="auth btn btn-lg mt-2 mb-2 text-center">
+              {{ this.inputDigitLeft}}
+            </button>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-1">
+        <img src="../../assets/c-1.png" width="70px" class="image-fluid etherium2" alt="lit">
+        <img src="../../assets/c-1.png" width="50px" class="image-fluid etherium3" alt="lit">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
