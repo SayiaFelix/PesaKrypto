@@ -21,11 +21,11 @@ export class AuthService {
     });
   }
 
-  // requestOtp(Otp: any) {
-  //   return this.http.get<any>(
-  //     `https://cryptopesa.herokuapp.com/CryptoApp/Onboard/confirm?code=${Otp}`
-  //   );
-  // }
+  requestOtp(Otp: any) {
+    return this.http.get<any>(
+      `https://cryptopesa.herokuapp.com/CryptoApp/Onboard/confirm?code=${Otp}`
+    );
+  }
 
   loginUser(userLogin: loginData) {
     return this.http.post<any>(environment._loginUrl, userLogin, {

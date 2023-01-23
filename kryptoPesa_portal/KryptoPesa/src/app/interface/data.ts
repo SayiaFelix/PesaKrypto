@@ -8,6 +8,6 @@ export interface Data{
 }
 
 export interface loginData{
-    username:string,
+    user_name:string,
     pin:number  
 }

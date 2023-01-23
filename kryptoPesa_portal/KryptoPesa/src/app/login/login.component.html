@@ -18,7 +18,7 @@
             <form [formGroup]="LoginForm" (ngSubmit)="login()">
               <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && 
                     LoginForm.hasError('required','email')">
-                <label for="Email">Email</label>
+                <label for="Email">Username </label>
                 <br>
                 <input class="form-control" formControlName="email" type="text" required="required">
               </div>
