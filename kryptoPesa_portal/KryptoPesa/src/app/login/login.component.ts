@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(private fb: FormBuilder,
-    private http: HttpClient,
     private router: Router,
     private toast: NgToastService,
     private log: NavService,
@@ -33,8 +32,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.LoginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      username: ['', [Validators.required]],
+      pin: ['', Validators.required]
     });
     this.log.show()
   }

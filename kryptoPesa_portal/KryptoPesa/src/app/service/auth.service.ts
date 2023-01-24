@@ -27,7 +27,7 @@ export class AuthService {
     );
   }
 
-  loginUser(userLogin: loginData) {
+  loginUser(userLogin:any ) {
     return this.http.post<any>(environment._loginUrl, userLogin, {
       observe: 'response',
     });

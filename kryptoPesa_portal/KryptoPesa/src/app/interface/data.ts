@@ -8,6 +8,7 @@ export interface Data{
 }
 
 export interface loginData{
-    user_name:string,
-    pin:number  
+   'grant_type': 'pin',
+    username:'string',
+    pin:'number'
 }

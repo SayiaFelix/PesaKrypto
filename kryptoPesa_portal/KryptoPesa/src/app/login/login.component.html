@@ -16,29 +16,29 @@
           </div>
           <div class="panel-body mt-3">
             <form [formGroup]="LoginForm" (ngSubmit)="login()">
-              <div class="form-group mb-2" [class.error]="LoginForm.controls['email'].dirty && 
+              <div class="form-group mb-2" [class.error]="LoginForm.controls['username'].dirty && 
                     LoginForm.hasError('required','email')">
                 <label for="Email">Username </label>
                 <br>
-                <input class="form-control" formControlName="email" type="text" required="required">
+                <input class="form-control" formControlName="username" type="text" required="required">
               </div>
-              <small *ngIf="LoginForm.controls['email'].dirty && 
-                    LoginForm.hasError('required','email')" class="text-danger">Email is required</small>
+              <small *ngIf="LoginForm.controls['username'].dirty && 
+                    LoginForm.hasError('required','username')" class="text-danger">Username is required</small>
 
-              <small *ngIf="LoginForm.controls['email'].dirty &&
-                    LoginForm.hasError('email','email')" class="text-danger">Input Email Format</small>
+              <!-- <small *ngIf="LoginForm.controls['email'].dirty &&
+                    LoginForm.hasError('email','email')" class="text-danger">Input Email Format</small> -->
 
 
-              <div class="form-group mt-3" [class.error]="LoginForm.controls['password'].dirty && 
-                    LoginForm.hasError('required','password')">
-                <label for="Password">Pin</label>
+              <div class="form-group mt-3" [class.error]="LoginForm.controls['pin'].dirty && 
+                    LoginForm.hasError('required','pin')">
+                <label for="pin">Pin</label>
                 <br>
-                <input class="form-control" formControlName="password" [type]="changepass?'password':'text'"  [mask]="'(0000)'" required>
+                <input class="form-control" formControlName="pin" [type]="changepass?'pin':'text'"  [mask]="'(0000)'" required>
                 <span class="eyeicon eye" (click)="viewpass()">
                   <i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
               </div>
-              <small *ngIf="LoginForm.controls['password'].dirty && 
-                    LoginForm.hasError('required','password')" class="text-danger">Password is required</small>
+              <small *ngIf="LoginForm.controls['pin'].dirty && 
+                    LoginForm.hasError('required','pin')" class="text-danger">Pin is required</small>
               <br>
               <div class="mt-2">
                 <input class="" type="checkbox" name="remember" id="remember">
