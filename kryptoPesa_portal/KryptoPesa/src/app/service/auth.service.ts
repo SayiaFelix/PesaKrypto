@@ -6,14 +6,24 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class AuthService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   headers = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + btoa(environment.Username +  ':' + environment.Password),
     }),
   };
+
+  // private static generateHeaders(): { headers: HttpHeaders } {
+  //   return {
+  //     headers: new HttpHeaders({
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //       Authorization:
+  //         'Basic ' + btoa(environment.Username + ':' + environment.Password),
+  //     }),
+  //   };
+  // }
 
   registerUser(User: Data) {
     return this.http.post<any>(environment._registerUrl, User, {
@@ -27,9 +37,7 @@ export class AuthService {
     );
   }
 
-  loginUser(userLogin:any ) {
-    return this.http.post<any>(environment._loginUrl, userLogin, {
-      observe: 'response',
-    });
+  loginUser(userLogin: loginData) {
+    return this.http.post<any>(environment._loginUrl, userLogin, this.headers);
   }
 }
