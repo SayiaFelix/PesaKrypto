@@ -40,4 +40,15 @@ export class AuthService {
   loginUser(userLogin: loginData) {
     return this.http.post<any>(environment._loginUrl, userLogin, this.headers);
   }
+  storedToken(tokenValue: string){
+    localStorage.setItem('token', tokenValue);
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
+  }
+
+  isLoggedIn():boolean{
+    return !!localStorage.getItem('token')
+  }
 }
