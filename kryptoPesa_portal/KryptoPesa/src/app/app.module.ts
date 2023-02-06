@@ -41,7 +41,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { DialogComponent } from './dialog/dialog.component';
 import { Dialog2Component } from './dialog2/dialog2.component'
 import { NetworkInterceptor } from './network.interceptor';
-
+import{TokenInterceptor} from './token.interceptor';
 
  
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
@@ -97,6 +97,11 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
      provide:HTTP_INTERCEPTORS,
      useClass:NetworkInterceptor,
      multi:true
+  },
+   {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
   }],
   bootstrap: [AppComponent]
 })
