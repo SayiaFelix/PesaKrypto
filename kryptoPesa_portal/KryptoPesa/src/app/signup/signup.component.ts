@@ -70,25 +70,25 @@ export class SignupComponent implements OnInit {
   }
 
   Signup() {
-    if (this.SignupForm.valid) {
-         // send obj to db
-      console.log(this.SignupForm.value);
-         // this.http.post<any>(this._registerUrl, this.SignupForm.value)
-      this.auth.registerUser(this.SignupForm.value)
-        .subscribe(res => {
-          this.toast.success
-          ({ detail: 'Success Message', summary: "Registration Completed Successfully!!", duration: 5000 })
-          // alert('Signup successfully');
-          this.SignupForm.reset();
-          this.router.navigate(['otp']);
-        }, err => {
-          this.toast.error
-          ({ detail: 'Failed Message', summary: "Registration Failed, Something Went wrong!!", duration: 5000 })
-        })
-    } else {
-      ValidateForm.validateAllFormFields(this.SignupForm)
-      alert('Your Form is Empty')
-    }
+    // if (this.SignupForm.valid) {
+    //      // send obj to db
+    //   console.log(this.SignupForm.value);
+    //      // this.http.post<any>(this._registerUrl, this.SignupForm.value)
+    //   this.auth.registerUser(this.SignupForm.value)
+    //     .subscribe(res => {
+    //       this.toast.success
+    //       ({ detail: 'Success Message', summary: "Registration Completed Successfully!!", duration: 5000 })
+    //       // alert('Signup successfully');
+    //       this.SignupForm.reset();
+    //       this.router.navigate(['otp']);
+    //     }, err => {
+    //       this.toast.error
+    //       ({ detail: 'Failed Message', summary: "Registration Failed, Something Went wrong!!", duration: 5000 })
+    //     })
+    // } else {
+    //   ValidateForm.validateAllFormFields(this.SignupForm)
+    //   alert('Your Form is Empty')
+    // }
 
   }
 }

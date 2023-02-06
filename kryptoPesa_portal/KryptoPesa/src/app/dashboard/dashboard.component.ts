@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import {AuthService} from '../service/auth.service'
 import { NavService } from '../service/nav.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ChartConfiguration, ChartType } from 'chart.js'
@@ -80,7 +81,8 @@ export class DashboardComponent implements OnInit {
     private toast: NgToastService,
     private api: ApiService,
     private loader: LoadingService,
-    private http: HttpClient
+    private http: HttpClient,
+    private auth:AuthService
   ) { }
 
   ngOnInit(): void {
@@ -152,6 +154,10 @@ export class DashboardComponent implements OnInit {
         console.log(this.solData)
 
       })
+  }
+
+ signOut(){
+   this.auth.logOut();
   }
 
   getSolanaGraphData(days: number) {

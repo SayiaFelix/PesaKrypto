@@ -6,6 +6,8 @@ import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from '../Helper/validateForm';
 import { AuthService } from '../service/auth.service';
 import { NavService } from '../service/nav.service';
+import {HttpParams} from '@angular/common/http';  
+
 
 @Component({
   selector: 'app-login',
@@ -23,7 +25,8 @@ export class LoginComponent implements OnInit {
     this.changepass = !this.changepass;
   }
 
-  constructor(private fb: FormBuilder,
+  constructor(
+    private fb: FormBuilder,
     private router: Router,
     private toast: NgToastService,
     private log: NavService,
@@ -41,22 +44,46 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.LoginForm.valid) {
       // send obj to db
+      // let model = {
+      //   grant_type: 'pin',
+      //   username: this.LoginForm.get('username')?.value,
+      //   pin: this.LoginForm.get('pin')?.value
+      // }
+      const model = new HttpParams()
+          .set('grant_type', 'pin')
+          .set('username',  this.LoginForm.get('username')?.value.trim())  
+          .set('pin', this.LoginForm.get('pin')?.value.trim());
+
       console.log(this.LoginForm.value);
-      this.auth.loginUser(this.LoginForm.value)
+      this.auth.loginUser(model)
         .subscribe({
-          next: (res) => {
-            console.log(res);
+          next: (res:any) => {
+
+            if (res.status==200){
+            console.log(res)
+            console.log(res.message)
+            this.auth.storedToken(res.access_token)
             this.toast.success
-              ({ detail: 'Success Message', summary: "Login Completed Successfully!!", duration: 5000 })
+                  ({ detail: 'Success Message', summary: "Login Successfully!!", duration: 5000 })
             this.LoginForm.reset();
-            this.auth.storedToken(res.token)
             this.router.navigate(['dashboard']);
+
+            }else{
+               console.log(res.status)
+               console.log(res.message)
+               this.toast.error
+               ({ detail: 'Failed Message', summary: "Login Failed, Try Again", duration: 5000 })
+               this.LoginForm.reset();
+            }
           },
           error: (err) => {
             this.toast.error
               ({ detail: 'Failed Message', summary: "Login Failed, Something Went wrong!!", duration: 5000 })
           }
         })
+    }else{
+      ValidateForm.validateAllFormFields(this.LoginForm)
+      alert('Your Form is Empty')
     }
   }
 }
