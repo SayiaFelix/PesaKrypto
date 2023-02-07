@@ -9,7 +9,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
+// 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
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
@@ -21,11 +21,11 @@ export class TokenInterceptor implements HttpInterceptor {
     const localToken = localStorage.getItem('access_token');
 
     request = request.clone({
-      headers:request.headers.set(
-           'Authorization', 'Bearer' + localToken
-      )
+      headers :request.headers.set(
+           'Authorization', 'Bearer ' + localToken
+      ),
     })
-    
+
     // if (localToken){
     // request = request.clone({
     //   headers:request.headers.set(

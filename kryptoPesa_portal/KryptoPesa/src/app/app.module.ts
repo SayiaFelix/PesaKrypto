@@ -97,12 +97,13 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
      provide:HTTP_INTERCEPTORS,
      useClass:NetworkInterceptor,
      multi:true
-  },
-   {
-    provide: HTTP_INTERCEPTORS,
-    useClass: TokenInterceptor,
-    multi: true
-  }],
+  }
+  //  {
+  //   provide: HTTP_INTERCEPTORS,
+  //   useClass: TokenInterceptor,
+  //   multi: true
+  // }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

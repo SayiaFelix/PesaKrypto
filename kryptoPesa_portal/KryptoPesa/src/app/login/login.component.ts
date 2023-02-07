@@ -44,11 +44,7 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.LoginForm.valid) {
       // send obj to db
-      // let model = {
-      //   grant_type: 'pin',
-      //   username: this.LoginForm.get('username')?.value,
-      //   pin: this.LoginForm.get('pin')?.value
-      // }
+     
       const model = new HttpParams()
           .set('grant_type', 'pin')
           .set('username',  this.LoginForm.get('username')?.value.trim())  
@@ -58,7 +54,6 @@ export class LoginComponent implements OnInit {
       this.auth.loginUser(model)
         .subscribe({
           next: (res:any) => {
-
             if (res.status==200){
             console.log(res)
             console.log(res.message)

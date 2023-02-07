@@ -27,32 +27,6 @@
           </div>
           <div class="panel-body mt-3">
             <form [formGroup]="LoginForm" (ngSubmit)="login()">
-
-              <!-- <div
-                class="form-group mb-2"
-                [class.error]="
-                  LoginForm.controls['grant_type'].dirty &&
-                  LoginForm.hasError('required', 'grant_type')
-                "
-              >
-                <label for="grant">Grant Type </label>
-                <br />
-                <input
-                  class="form-control"
-                  formControlName="grant_type"
-                  type="text"
-                  required="required"
-                />
-              </div>
-              <small
-              *ngIf="
-                LoginForm.controls['grant_type'].dirty &&
-                LoginForm.hasError('required', 'grant_type')
-              "
-              class="text-danger"
-              >Grant Type Pin</small
-            > -->
-
               <div
                 class="form-group mb-2"
                 [class.error]="
@@ -77,7 +51,6 @@
                 class="text-danger"
                 >Username is required</small
               >
-
               <!-- <small *ngIf="LoginForm.controls['email'].dirty &&
                     LoginForm.hasError('email','email')" class="text-danger">Input Email Format</small> -->
 

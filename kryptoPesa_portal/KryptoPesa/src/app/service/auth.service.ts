@@ -58,12 +58,13 @@ logOut(){
     localStorage.clear();
     this.router.navigate(['login'])
   }
+  
   requestOtp(Otp: any) {
     return this.http.get<any>(
       `https://cryptopesa.herokuapp.com/CryptoApp/Onboard/confirm?code=${Otp}`
     );
   }
 
- 
+
  
 }
