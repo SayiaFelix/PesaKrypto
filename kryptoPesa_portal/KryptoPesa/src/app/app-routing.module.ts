@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'otp',component:OtpComponent},
 
   {path:'homepage',component:HomepageComponent},
-  {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent},
+  {path:'dashboard',component:DashboardComponent},
   {path:'about-us',component:AboutusComponent},
   {path:'coinDetail/:id',component:KryptoPriceComponent},
 
